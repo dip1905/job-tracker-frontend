@@ -43,7 +43,7 @@ const EditJob = () => {
       const userId = localStorage.getItem("userId");
       await updateJob(id, form, userId);
       alert("Job Updated Successfully");
-      navigate("/Home");
+      navigate("/home");
     } catch (err) {
       console.error(err);
       alert("Failed to update job");
