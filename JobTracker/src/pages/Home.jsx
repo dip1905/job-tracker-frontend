@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 import Countnumber from "../components/countNumber.jsx";
-import Searchbar from "../components/SearchBar.jsx";
+import SearchBar from "../components/SearchBar.jsx";
 import JobList from "../components/JobList.jsx";
 import { useEffect, useState } from "react";
 import { getMyJobs, searchByCompany } from "../services/api";
@@ -68,7 +68,7 @@ function Home() {
         </button>
       </nav>
       <Countnumber jobs={jobs} onFilter={handleFilter} />
-      <Searchbar onSearch={handleSearch} />
+      <SearchBar onSearch={handleSearch} />
       <JobList jobs={filteredJobs} refresh={fetchJobs} />
     </div>
   );
