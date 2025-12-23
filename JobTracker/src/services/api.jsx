@@ -1,12 +1,12 @@
 import axios from "axios";
 
-// const API_URL = "http://localhost:8080/api";
 const API_URL = "https://job-tracker-backend-1-kk7s.onrender.com/api";
+
 const api = axios.create({
   baseURL: API_URL,
 });
 
-/* ✅ REQUEST INTERCEPTOR (VERY IMPORTANT) */
+/* ✅ ADD REQUEST INTERCEPTOR */
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token");
@@ -18,7 +18,7 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-/* ✅ RESPONSE INTERCEPTOR */
+/* ✅ KEEP RESPONSE INTERCEPTOR */
 api.interceptors.response.use(
   (res) => res,
   (err) => {
@@ -31,11 +31,9 @@ api.interceptors.response.use(
   }
 );
 
-/* ✅ AUTH */
 export const register = (data) => api.post("/auth/register", data);
 export const login = (data) => api.post("/auth/login", data);
 
-/* ✅ JOB APIs (JWT REQUIRED) */
 export const addJob = (job, userId) =>
   api.post(`/jobs/add?userId=${userId}`, job);
 
@@ -51,11 +49,6 @@ export const updateJob = (id, job, userId) =>
 export const deleteJob = (id, userId) =>
   api.delete(`/jobs/delete/${id}?userId=${userId}`);
 
-export const searchByCompany = (name, userId) =>
-  api.get(`/jobs/search/${name}?userId=${userId}`);
-
-export const getJobsByStatus = (status, userId) =>
-  api.get(`/jobs/status/${status}?userId=${userId}`);
 
 // api.interceptors.response.use(
 //   (res) => res,
