@@ -6,7 +6,7 @@ const api = axios.create({
   baseURL: API_URL,
 });
 
-/* ✅ ADD REQUEST INTERCEPTOR */
+// REQUEST INTERCEPTOR
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token");
@@ -18,7 +18,7 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-/* ✅ KEEP RESPONSE INTERCEPTOR */
+// RESPONSE INTERCEPTOR
 api.interceptors.response.use(
   (res) => res,
   (err) => {
@@ -48,6 +48,13 @@ export const updateJob = (id, job, userId) =>
 
 export const deleteJob = (id, userId) =>
   api.delete(`/jobs/delete/${id}?userId=${userId}`);
+
+export const searchByCompany = (name, userId) =>
+  api.get(`/jobs/search/${name}?userId=${userId}`);
+
+export const getJobsByStatus = (status, userId) =>
+  api.get(`/jobs/status/${status}?userId=${userId}`);
+
 
 
 // api.interceptors.response.use(
