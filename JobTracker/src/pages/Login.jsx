@@ -14,7 +14,7 @@ function Login() {
       const res = await login({ username, password });
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("userId", res.data.userId);
-      navigate("/Home");
+      navigate("/home");
     } catch (err) {
       alert("Invalid username or password");
     }
