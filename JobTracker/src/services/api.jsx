@@ -56,7 +56,7 @@ export const searchByCompany = (name, userId) =>
 
 export const getJobsByStatus = (status, userId) =>
   api.get(`/jobs/status/${status}?userId=${userId}`);
-================================
+
 // api.interceptors.response.use(
 //   (res) => res,
 //   (err) => {
