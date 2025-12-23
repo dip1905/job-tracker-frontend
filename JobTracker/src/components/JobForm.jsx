@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Jobform.css";
+import "./jobform.css";
 import { addJob } from "../services/api";
 
 const JobForm = () => {
