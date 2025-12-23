@@ -18,9 +18,12 @@ api.interceptors.response.use(
   }
 );
 
-export const register = (data) => axios.post(`${API_URL}/auth/register`, data);
+// export const register = (data) => axios.post(`${API_URL}/auth/register`, data);
 
-export const login = (data) => axios.post(`${API_URL}/auth/login`, data);
+// export const login = (data) => axios.post(`${API_URL}/auth/login`, data);
+export const register = (data) => axios.post("/auth/register", data);
+
+export const login = (data) => axios.post("/auth/login", data);
 
 export const addJob = (job, userId) => api.post(`/jobs/add?userId=${userId}`, job);
 export const getMyJobs = (userId) => api.get(`/jobs/myjobs?userId=${userId}`);
