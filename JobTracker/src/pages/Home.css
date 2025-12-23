@@ -1,0 +1,27 @@
+.container{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.heading {
+    display: inline;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.button-container {
+    display: inline;
+    margin-left: 550px;
+    padding: 7px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    background-color: royalblue;
+    padding: 10px 15px;
+    border-radius: 18px;
+}

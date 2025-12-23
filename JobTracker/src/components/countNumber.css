@@ -1,0 +1,55 @@
+.count-number {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    padding: 20px;
+    margin-left: 240px;
+    margin-top: 50px;
+}
+
+.count-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: orange;
+}
+
+h1 {
+    margin: auto;
+    font-size: 1.3rem;
+    color: white;
+}
+
+h3 {
+    margin: auto;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.total {
+  background-color: #ff9800;
+}
+
+.applied {
+  background-color: #2196f3;
+}
+
+.interview {
+  background-color: #4caf50;
+}
+
+.upcoming {
+  background-color: #a8817f;
+}
+
+.rejected {
+  background-color: #f44336;
+}
+
