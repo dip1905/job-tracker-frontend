@@ -39,7 +39,7 @@ const JobForm = () => {
         status: "",
         notes: "",
       });
-      navigate("/Home");
+      navigate("/home");
     } catch (error) {
       console.error(error);
       alert("Failed to add job");
