@@ -3,7 +3,7 @@ import AuthHome from "./pages/AuthHome.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import Home from "./pages/Home";
-import { BrowserRouter as Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Jobform from "./components/JobForm.jsx";
 import EditJob from "./components/EditJob.jsx";
 
